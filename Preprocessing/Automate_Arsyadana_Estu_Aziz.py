@@ -54,3 +54,8 @@ def preprocess_data(input_path, output_path):
     # Save result
     df_processed.to_csv(output_path, index=False)
     joblib.dump(preprocessor, 'preprocessor.joblib')
+
+if __name__ == "__main__":
+    input_path = sys.argv[1]
+    output_path = sys.argv[2]
+    preprocess_data(input_path, output_path)
