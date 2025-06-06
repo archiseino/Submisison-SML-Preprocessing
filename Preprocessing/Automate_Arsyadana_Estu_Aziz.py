@@ -5,6 +5,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 import joblib
+import sys
 
 def preprocess_data(input_path, output_path):
     df = pd.read_csv(input_path)
