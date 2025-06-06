@@ -30,7 +30,7 @@ def preprocess_data(input_path, output_path):
 
     one_hot_pipe = Pipeline([
         ('imputer', SimpleImputer(strategy='constant', fill_value='None')),
-        ('encoder', OneHotEncoder(handle_unknown='ignore', sparse=False))
+        ('encoder', OneHotEncoder(handle_unknown='ignore'))
     ])
 
     ordinal_pipe = Pipeline([
